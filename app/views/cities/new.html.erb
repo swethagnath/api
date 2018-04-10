@@ -1,0 +1,7 @@
+<%=form_for @cities do |f|%>
+	<label for="cities_name">name</label><br>
+	<%=f.text_field :name%><br>
+	<label for="cities_city_code">city code</label><br>
+	<%=f.text_field :city_code%><br>
+	<%=f.submit%>
+<%end%>

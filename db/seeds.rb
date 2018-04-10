@@ -1,4 +1,4 @@
-=begin
+
 categories=["Delivery","Dine-out","NightLife","Catchingup","Takeaway"]
 categories.each do |category|
    Category.create(name: category)
@@ -76,7 +76,7 @@ end
 20.times do 
 	Review.create(rating: Random.rand(2..5), restaurant_id: Random.rand(1..10), user_id: Random.rand(1..10), review_body: Faker::Lorem.paragraph)
 end
-=end
+
 
 
 

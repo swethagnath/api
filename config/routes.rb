@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
-	#root to: "devise/sessions#new"
-  devise_for :users
+	namespace :api, format: 'json' do 
+	  	namespace :v1 do 	  		
+	  		resources :categories
+	  		resources :locations
+	  		resources :restaurants do 
+	  			resources :reviews
+	  		end
+	  	end
+    end	
+     devise_for :users 
 end

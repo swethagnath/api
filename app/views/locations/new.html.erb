@@ -1,0 +1,13 @@
+<%=form_for @location do |f|%>
+	<label for="location_name">name</label><br>
+	<%=f.text_field :name%><br>
+	<label for="location_latitude">latitude</label><br>
+	<%=f.text_field :latitude%><br>
+	<label for="location_longitude">longitude</label><br>
+	<%=f.text_field :longitude%><br>
+	<label for="location_city_id">city name</label><br>
+	<%=f.collection_select :city_id,City.all,:id,:name%><br>
+	<label for="location_pincode">pincode</label><br>
+	<%=f.text_field :pincode%><br>
+	<%=f.submit%>
+<%end%>	
